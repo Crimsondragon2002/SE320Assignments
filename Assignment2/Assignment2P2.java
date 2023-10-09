@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-public class Exercise19_03 {
+public class Assigment2P2 {
 	public static void main(String[] args) 
 	{
 		ArrayList<Integer> list = new ArrayList<Integer>();
