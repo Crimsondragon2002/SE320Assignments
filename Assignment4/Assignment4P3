@@ -1,0 +1,20 @@
+import java.text.NumberFormat;
+import java.text.ParseException;
+import java.util.*;
+public class IntenationTest {
+	// parse refuses to work without throw, so included it but did not catch it
+	 public static void main(String[] args) throws ParseException {
+	 double ukNumber =  12345.678;
+	 NumberFormat ukForm = NumberFormat.getInstance(Locale.UK);
+	 ukForm.setMaximumFractionDigits(2);
+	 String ukString = ukForm.format(ukNumber);
+	 System.out.println("The result of formatting 12345.678 using uk locale and 2 decimal places is " +ukString);
+	 double usCurrNumber = 12345.678;
+	 NumberFormat usCurrForm = NumberFormat.getCurrencyInstance(Locale.US);
+	 String usCurrString = usCurrForm.format(usCurrNumber);
+	 System.out.println("The result of formatting 12345.678 in us currency is " + usCurrString);
+	 String numString = "12,345.678";
+	 Number numDouble = ukForm.parse(numString);
+	 System.out.println("The result of parsing 12,345.678 is " + numDouble);
+	 }
+}
