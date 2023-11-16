@@ -1,0 +1,36 @@
+import java.util.*;
+
+public class Assignment4P2 {
+	 public static void main(String[] args) {
+	LinkedHashSet A1 = new LinkedHashSet();
+	LinkedHashSet B1 = new LinkedHashSet();
+	A1.add("George");
+	A1.add("Jim");
+	A1.add("John");
+	A1.add("Blake");
+	A1.add("Kevin");
+	A1.add("Michael");
+	B1.add("George");
+	B1.add("Katie");
+	B1.add("Kevin");
+	B1.add("Michelle");
+	B1.add("Ryan");
+	LinkedHashSet A2 = (LinkedHashSet) A1.clone();
+	LinkedHashSet A3 = (LinkedHashSet) A1.clone();
+	LinkedHashSet A4 = (LinkedHashSet) A1.clone();
+	LinkedHashSet B2 = (LinkedHashSet) B1.clone();
+	LinkedHashSet B3 = (LinkedHashSet) B1.clone();
+	LinkedHashSet B4 = (LinkedHashSet) B1.clone();
+	B1.addAll(A1);
+	B2.removeAll(A2);
+	A3.removeAll(B3);
+	B4.retainAll(A4);
+	System.out.println("Union is " + B1);
+	System.out.println("Difference for linked hash set B as compared to  A is " + B2);
+	System.out.println("Difference for linked hash set A as compared to B is"  + A3);
+	System.out.println("Intersection is " + B4);
+// Adding element to LinkedHashSet 
+// using add() method 
+
+	 }
+}
