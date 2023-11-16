@@ -1,0 +1,36 @@
+import java.util.*;
+import java.io.*;
+//File that is used for testing C:/Users/joshu/eclipse-workspace/Assignment4/src/fourth/file.txt
+public class Assignment4P1 {
+ public static void main(String[] args) throws IOException
+ {
+	 
+	 Scanner scan = new Scanner(System.in);
+	 System.out.println("Type file to test, make sure that the full path is printed");
+	 String file = scan.nextLine();
+	 BufferedReader bufReader = new BufferedReader(new FileReader(file));
+	 ArrayList<String> listOfLines = new ArrayList<>();
+	 TreeSet t = new TreeSet();
+	 String line = bufReader.readLine();
+	 while (line != null) {
+		  listOfLines.add(line);
+	      line = bufReader.readLine();
+	      
+	    }
+	    bufReader.close();
+	  System.out.println(listOfLines);
+	  for(int i = 0; i<listOfLines.size();i++)
+	  {
+		 
+		 String lining = listOfLines.get(i).toString();
+		 String[] array = lining.split(" ");
+		 for(int j = 0; j<array.length;j++)
+		 {
+			 System.out.println("The value at " + j + " is " + array[j]);
+			 t.add(array[j]);
+		 }
+	  }
+	 System.out.println(t);
+	  
+ }
+}
